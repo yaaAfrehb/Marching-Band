@@ -1,457 +1,113 @@
-/* =================================
-   ACTUAL QUIZ PAGE
-================================= */
-
-.actual-quiz {
-
-    min-height: 100vh;
-
-    padding: 30px 55px 70px;
-
+body {
+    margin: 0;
     background: #fff5e8;
+    font-family: Arial, sans-serif;
+    color: #111;
 }
 
 
-/* =================================
-   TOP
-================================= */
+/* TOP */
 
 .quiz-top {
-
     display: flex;
-
     justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 12px;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-
-.quiz-category {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color: #888;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
+.category {
+    color: #777;
     letter-spacing: 1px;
 }
 
-
-.orange-dot {
-
-    width: 9px;
-    height: 9px;
-
-    background: #f7941d;
-
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ff9418;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
 
-#question-number {
-
-    font-weight: bold;
-
-    color: #303030;
-
-}
-
-
-/* =================================
-   PROGRESS BAR
-================================= */
+/* PROGRESS */
 
 .progress {
-
-    width: 100%;
-
-    height: 6px;
-
-    background: #e5d7c5;
-
+    height: 7px;
+    background: #e4d6c4;
+    margin: 5px 18px 60px;
     border-radius: 10px;
-
-    overflow: hidden;
-
-    margin-bottom: 50px;
 }
-
 
 #progress-bar {
-
-    width: 10%;
-
     height: 100%;
-
-    background: #f7941d;
-
+    width: 10%;
+    background: #ff9418;
     border-radius: 10px;
-
-    transition: width 0.3s;
 }
 
 
-/* =================================
-   QUESTION CARD
-================================= */
+/* QUESTION CARD */
 
-.question-card {
-
-    max-width: 775px;
-
-    margin: 0 auto;
-
-    padding: 28px 26px 20px;
-
+.question {
+    max-width: 690px;
+    margin: auto;
+    padding: 35px;
     background: white;
-
     border-radius: 30px;
-
-    box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
 }
 
 
-/* =================================
-   QUESTION HEADING
-================================= */
+/* QUESTION */
 
-.question-heading {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-bottom: 20px;
-}
-
-
-.quiz-icon {
-
-    width: 55px;
-
-    height: 55px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: #ff9818;
-
-    border-radius: 17px;
-
+.question h3 {
     font-size: 26px;
-}
-
-
-.question-heading span {
-
-    color: #ff9818;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-
-.question-code {
-
-    background: #eef0f8;
-
-    color: #3e4b8b;
-
-    padding: 5px 9px;
-
-    border-radius: 6px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-}
-
-
-/* =================================
-   QUESTION TEXT
-================================= */
-
-#question {
-
-    margin: 0 0 28px;
-
-    color: #111;
-
-    font-size: 26px;
-
     line-height: 1.4;
+    margin-bottom: 30px;
 }
 
 
-/* =================================
-   IMAGE AREA
-================================= */
+/* ANSWERS */
 
-.quiz-picture {
+.question input {
+    margin-right: 10px;
+}
 
-    height: 130px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    margin-bottom: 20px;
-
-    background: #fff0df;
-
-    border-radius: 16px;
-
-    font-size: 42px;
+.question label {
+    display: block;
 }
 
 
-/* =================================
-   ANSWER BUTTONS
-================================= */
-
-.answer {
-
-    width: 100%;
-
-    min-height: 65px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 9px;
-
-    padding: 12px 18px;
-
-    background: white;
-
-    border: 2px solid #ead7c0;
-
-    border-radius: 15px;
-
-    cursor: pointer;
-
-    text-align: left;
-
-    font-size: 16px;
-
-    color: #111;
-
-    transition: 0.15s;
-}
-
-
-.answer:hover {
-
-    border-color: #f7941d;
-
-    background: #fffaf4;
-}
-
-
-.answer.selected {
-
-    border-color: #f7941d;
-
-    background: #fff5e8;
-}
-
-
-/* circle */
-
-.answer-circle {
-
-    width: 25px;
-
-    height: 25px;
-
-    min-width: 25px;
-
-    border: 2px solid #decdb8;
-
-    border-radius: 50%;
-}
-
-
-.answer.selected .answer-circle {
-
-    border: 7px solid #f7941d;
-
-}
-
-
-/* =================================
-   NEXT BUTTON
-================================= */
-
-.quiz-controls {
-
-    max-width: 775px;
-
-    margin: 20px auto 0;
-
-    display: flex;
-
-    justify-content: flex-end;
-}
-
+/* NEXT */
 
 #next-button {
+     padding: 15px 30px;
+    display: block;
+    margin: 30px auto 0;
 
-    padding: 13px 27px;
-
-    border: none;
-
-    border-radius: 25px;
-
-    background: #f7941d;
-
+    background: #ff9418;
     color: white;
 
-    font-size: 16px;
+    border: none;
+    border-radius: 30px;
 
+    font-size: 17px;
     font-weight: bold;
 
     cursor: pointer;
 }
-
 
 #next-button:hover {
-
-    background: #e98712;
-
+    background: #e9820b;
 }
 
 
-/* =================================
-   RESULTS
-================================= */
+/* RESULTS */
 
-.results {
-
-    max-width: 775px;
-
+#results {
+    max-width: 690px;
     margin: 40px auto;
-
-    padding: 50px;
-
     text-align: center;
-
-    background: white;
-
-    border-radius: 30px;
-}
-
-
-.result-emoji {
-
-    font-size: 55px;
-}
-
-
-.results h1 {
-
-    color: #14295c;
-
-}
-
-
-.results h2 {
-
-    color: #f7941d;
-
-}
-
-
-.results p {
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    color: #555;
-
-}
-
-
-.results button {
-
-    padding: 14px 25px;
-
-    border: none;
-
-    border-radius: 25px;
-
-    background: #f7941d;
-
-    color: white;
-
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-
-.hidden {
-
-    display: none;
-}
-
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 700px) {
-
-    .actual-quiz {
-
-        padding: 20px 15px 50px;
-
-    }
-
-    .question-card {
-
-        border-radius: 22px;
-
-        padding: 22px 16px;
-
-    }
-
-    #question {
-
-        font-size: 21px;
-
-    }
-
-    .quiz-picture {
-
-        height: 100px;
-
-        font-size: 32px;
-
-    }
-
 }

@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8 to 5: The Inner Workings of the Marching Band</title>
     <link rel="stylesheet" href="actualquizstyle.css">
-    <link rel=""
     <script src="quiz.js" defer></script>
 </head>
 <body>
+
+    <div class="quiz-top">
+    <div class="category">
+        <span class="dot"></span>
+        SUMMER BAND
+    </div>
+
+    <div id="question-number">1 of 10</div>
+</div>
+
+<div class="progress">
+    <div id="progress-bar"></div>
+</div>
 
 <!-- quiz -->
    <form id="bandQuiz">
@@ -20,14 +32,16 @@
         <input type="radio" name="q1" value="c"> Sunscreen<br>
         <input type="radio" name="q1" value="d"> All of the above<br>
     </div>
+    
 
     <div class = "question">
         <h3>2. It's 95 degrees outside and you finally been granted a break. What do you do?</h3>
         <input type="radio" name="q2" value="a"> Sit in the shade and drink your nice, cold, water.<br>
         <input type="radio" name="q2" value="b"> Stay on the field and keep on playing. <em> The grind never stops</em><br>
         <input type="radio" name="q2" value="c"> Take a nap.<br>
-        <input type="radio" name="q2" value="d"> Go whine to your drum major about how hot it is.<em> Best option</em>
+        <input type="radio" name="q2" value="d"> Go whine to your drum major about how hot it is.<em> Best option</em><br>
     </div>
+    
     
     <div class = "question">
         <h3>3. When your band director says "One more time!" do they actually mean it?</h3>
@@ -79,6 +93,7 @@
         <input type="radio" name="q9" value="c">Start marching backwards<br>
         <input type="radio" name="q9" value="d">Start dancing <br>
     </div>
+  
 
     <div class="question">
         <h3>10. Yay! Last day of Band Camp. You should: </h3>
@@ -87,5 +102,8 @@
         <input type="radio" name="q10" value="c"> Thank your section leader, drum major, and band director for their guidance and motivation.<br>
         <input type="radio" name="q10" value="d"> All of the above<br>
     </form>
+  
+<button type="button" id="next-button">Next →</button>
+<div id="results"></div>  
 </body>
 </html>
