@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fff7eb;
+
+    color: #14295c;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-bottom: 1px solid #eee0cd;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+
+    color: #14295c;
+
+    font-weight: 600;
+
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    color: #f7941d;
+}
+
+
+/* =========================
+   INTRO PAGE
+========================= */
+
+.quiz-intro {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 80px 40px;
+}
+
+
+/* little pill at the top */
+
+.intro-pill {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 18px;
+
+    background: white;
+
+    border: 1px solid #eadfce;
+
+    border-radius: 30px;
+
+    color: #34457a;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.intro-pill span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #f7941d;
+}
+
+
+/* main heading */
+
+.quiz-intro h1 {
+    font-size: clamp(45px, 7vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin: 45px 0 25px;
+
+    color: #14295c;
+}
+
+
+/* description */
+
+.quiz-intro h2 {
+    max-width: 700px;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: #38445e;
+
+    margin-bottom: 40px;
+}
+
+
+/* START BUTTON */
+
+.start-button {
+    display: inline-block;
+
+    padding: 20px 38px;
+
+    background: #f7941d;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border-radius: 35px;
+
+    box-shadow: 0 10px 25px rgba(247, 148, 29, 0.25);
+
+    transition: 0.2s;
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+
+    background: #e98712;
+}
