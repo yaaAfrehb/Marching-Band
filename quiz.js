@@ -54,6 +54,12 @@ document.getElementById("next-button").addEventListener("click", function (event
         return;
     }
 
+    // ⭐ NEW: Check if the selected answer is correct before changing the question
+    // This assumes your correct radio inputs look like: <input type="radio" value="correct">
+    if (selected.value === "correct") {
+        score++;
+    }
+
     // Move to next question
     currentQuestion++;
 
@@ -71,21 +77,15 @@ function showResults() {
 
     // Hide quiz
     document.getElementById("bandQuiz").style.display = "none";
-
     document.getElementById("next-button").style.display = "none";
-
     document.querySelector(".quiz-top").style.display = "none";
-
     document.querySelector(".progress").style.display = "none";
 
     // Show results
+    // ⭐ UPDATED: Added the dynamic score out of 10 inside the template literal
     document.getElementById("results").innerHTML = `
         <h1>🎺 You survived!</h1>
-        <p>You made it through all 10 questions.</p>
+        <p>You scored <strong>${score}</strong> out of ${questions.length} questions.</p>
         <button onclick="location.reload()">Take it again</button>
     `;
 }
-
-
-// Start with question 1
-showQuestion();
