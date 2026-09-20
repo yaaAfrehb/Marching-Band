@@ -182,7 +182,8 @@ story {
     margin-top: 20px;
     font-family:'Space Grotesk', sans-serif;
 }
-/* navbar */
+
+/* * navbar */
 .navbar {
     background-color: darkred;
     padding: 10px;
@@ -199,42 +200,46 @@ story {
 }
 
 
+/* photo carousel */
 .band-gallery {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 50px 0;
+    padding: 15px 0;
 }
 
 .gallery-track {
     display: flex;
     align-items: center;
-    gap: 18px;
-
-    transform: translateX(-20%);
-    transition: transform 0.6s ease;
+    gap: 12px;
+    width: max-content;
+    animation: scrollGallery 30s linear infinite;
 }
 
 .gallery-slide {
-    flex: 0 0 28%;
-    height: 420px;
+    width: 250px;
+    height: 300px;
 
+    flex-shrink: 0;
     overflow: hidden;
-
-    transition:
-        transform 0.5s ease,
-        opacity 0.5s ease;
 }
 
 .gallery-slide img {
-    width: 100%;
-    height: 100%;
-
+    width: 95%;
+    height: 95%;
     object-fit: cover;
-
     display: block;
 }
-.gallery-slide.active {
-    flex: 0 0 50%;
-    height: 500px;
+
+
+@keyframes scrollGallery {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 9px));
+    }
+
 }
