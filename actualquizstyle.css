@@ -1,9 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@300..700&display=swap');
+
+
 body {
     margin: 0;
-    background: #fff5e8;
-    font-family: Arial, sans-serif;
-    color: #111;
+    background-color: #1a1a1a;
+    font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+    margin: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #174d2b 0px,
+            #174d2b 80px,
+            #1b5a32 80px,
+            #1b5a32 160px
+        );
+
+    color: white;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 9.5%,
+            rgba(255,255,255,0.35) 9.5%,
+            rgba(255,255,255,0.35) 10%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(255,255,255,0.18),
+            transparent 55%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
 
 
 /* TOP */
@@ -19,15 +69,23 @@ body {
 .category {
     color: #777;
     letter-spacing: 1px;
+    font-family: 'Michroma', sans-serif;
 }
 
 .dot {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: #ff9418;
+    background: whitesmoke;
     border-radius: 50%;
     margin-right: 8px;
+    font-family: 'Michroma', sans-serif;
+}
+
+#question-number {
+    font-family: 'Space Grotesk' sans-serif;
+    color: whitesmoke;
+
 }
 
 
@@ -35,7 +93,7 @@ body {
 
 .progress {
     height: 7px;
-    background: #e4d6c4;
+    background: black;
     margin: 5px 18px 60px;
     border-radius: 10px;
 }
@@ -43,7 +101,7 @@ body {
 #progress-bar {
     height: 100%;
     width: 10%;
-    background: #ff9418;
+    background: white;
     border-radius: 10px;
 }
 
@@ -51,12 +109,12 @@ body {
 /* QUESTION CARD */
 
 .question {
-    max-width: 690px;
-    margin: auto;
+    background: rgba(10, 25, 16, 0.92);
+    border: 10px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
     padding: 35px;
-    background: white;
-    border-radius: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 
@@ -66,6 +124,8 @@ body {
     font-size: 26px;
     line-height: 1.4;
     margin-bottom: 30px;
+    color:whitesmoke;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 
@@ -73,6 +133,8 @@ body {
 
 .question input {
     margin-right: 10px;
+    color:#1a1a1a;
+    font-family: 'Space Grotesk', sans-serif
 }
 
 .question label {
@@ -82,13 +144,13 @@ body {
 
 /* NEXT */
 
-#next-button {
-     padding: 15px 30px;
+#next-button { 
+    padding: 15px 30px;
     display: block;
     margin: 30px auto 0;
 
-    background: #ff9418;
-    color: white;
+    background: white;
+    color: #174d2b;
 
     border: none;
     border-radius: 30px;
@@ -99,8 +161,8 @@ body {
     cursor: pointer;
 }
 
-#next-button:hover {
-    background: #e9820b;
+#next-button:hover { 
+    background: #dcdcdc;
 }
 
 
