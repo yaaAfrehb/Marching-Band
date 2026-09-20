@@ -164,19 +164,59 @@ body::after {
     cursor: pointer;
 }
 
-    next-button:hover { 
-    background: #dcdcdc;
-    padding: 15px 15px;
-    font-size: 35px;
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1.5);
-}
 
 
 /* RESULTS */
 
 #results {
-    max-width: 690px;
-    margin: 40px auto;
+    max-width: 600px;
+    margin: 80px auto 0;
+    background: rgba(0, 0, 0, 0.45); /* Soft darker overlay box so text readability is maximized */
+    border: 5px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+    padding: 40px;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.results-heading {
+    font-family: 'Michroma', sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.results-score {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.results-desc {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+/* RESULTS RESTART BUTTON Styling */
+.restart-btn {
+    padding: 15px 35px;
+    background: white;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.restart-btn:hover {
+    background: #dcdcdc;
+    transform: scale(1.05);
+}
+
+.restart-btn:active {
+    transform: scale(0.98);
 }

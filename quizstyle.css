@@ -1,161 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    background: #101214;
 
-    background: #fff7eb;
+    color: #F5F1E8;
 
-    color: #14295c;
+    overflow-x: hidden;
 }
+
 
 
 /* =========================
-   NAVIGATION
+   NAVBAR
 ========================= */
 
 .navbar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 70px;
+
     display: flex;
 
-    justify-content: center;
     align-items: center;
 
-    gap: 25px;
+    justify-content: center;
 
-    padding: 20px;
+    gap: 32px;
 
-    background: white;
+    padding: 15px 20px;
 
-    border-bottom: 1px solid #eee0cd;
+    background: #A92538;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    z-index: 10;
+
+    font-family:'Michroma', sans-serif;
 }
+
 
 .navbar li {
     list-style: none;
 }
 
+
 .navbar a {
+    position: relative;
+
+    color: #F5F1E8;
+
     text-decoration: none;
 
-    color: #14295c;
+    font-size: 17px;
 
     font-weight: 600;
 
-    font-size: 15px;
+    transition: 0.3s ease;
 }
 
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: white;
+
+    transition: width 0.3s ease;
+}
+
+
 .navbar a:hover {
-    color: #f7941d;
+    color: white;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.5);
+}
+
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 
 /* =========================
-   INTRO PAGE
+   BACKGROUND
 ========================= */
 
-.quiz-intro {
-    max-width: 900px;
+.quiz-background {
+    position: fixed;
 
-    margin: 0 auto;
+    inset: 0;
 
-    padding: 80px 40px;
+    z-index: -1;
+
+    overflow: hidden;
 }
 
 
-/* little pill at the top */
+.quiz-grid {
+    position: absolute;
 
-.intro-pill {
-    display: inline-flex;
+    inset: -100px;
 
+    background-image:
+        linear-gradient(
+            rgba(139, 30, 45, 0.14) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(139, 30, 45, 0.14) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    animation: moveGrid 18s linear infinite;
+}
+
+
+@keyframes moveGrid {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(50px, 50px);
+    }
+
+}
+
+
+/* =========================
+   FLOATING DOTS
+========================= */
+
+.quiz-dots {
+    position: absolute;
+
+    inset: 0;
+}
+
+
+.quiz-dots span {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #A92538;
+
+    box-shadow:
+        0 0 12px rgba(169, 37, 56, 0.8);
+
+    animation: floatDot 7s ease-in-out infinite;
+}
+
+
+.quiz-dots span:nth-child(1) {
+    left: 12%;
+    top: 20%;
+}
+
+.quiz-dots span:nth-child(2) {
+    left: 28%;
+    top: 75%;
+}
+
+.quiz-dots span:nth-child(3) {
+    left: 45%;
+    top: 30%;
+}
+
+.quiz-dots span:nth-child(4) {
+    left: 65%;
+    top: 65%;
+}
+
+.quiz-dots span:nth-child(5) {
+    left: 80%;
+    top: 20%;
+}
+
+.quiz-dots span:nth-child(6) {
+    left: 90%;
+    top: 75%;
+}
+
+.quiz-dots span:nth-child(7) {
+    left: 55%;
+    top: 85%;
+}
+
+
+@keyframes floatDot {
+
+    0%, 100% {
+        transform: translate(0, 0);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(15px, -25px);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.quiz-label {
+    display: flex;
     align-items: center;
 
     gap: 10px;
 
-    padding: 11px 18px;
+    margin-bottom: 25px;
 
-    background: white;
+    color: #A92538;
 
-    border: 1px solid #eadfce;
-
-    border-radius: 30px;
-
-    color: #34457a;
+    font-family: 'Michroma', sans-serif;
 
     font-size: 14px;
 
-    font-weight: 600;
+    letter-spacing: 3px;
 }
 
-.intro-pill span {
-    width: 9px;
-    height: 9px;
+
+.quiz-label span {
+    width: 8px;
+    height: 8px;
 
     border-radius: 50%;
 
-    background: #f7941d;
+    background: #A92538;
+
+    box-shadow:
+        0 0 12px rgba(169, 37, 56, 0.8);
 }
 
 
-/* main heading */
+/* title */
+.quiz-intro {
+    width: 100%;
+    max-width: 1100px;
 
-.quiz-intro h1 {
-    font-size: clamp(45px, 7vw, 72px);
+    margin: 35px auto 0;
 
-    line-height: 1.05;
+    color: #F5F1E8;
 
-    letter-spacing: -2px;
+    font-family: 'Michroma', sans-serif;
 
-    margin: 45px 0 25px;
+    font-size: clamp(28px, 3vw, 46px);
 
-    color: #14295c;
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 25px rgba(139, 30, 45, 0.45);
 }
+
 
 
 /* description */
 
-.quiz-intro h2 {
-    max-width: 700px;
+.quiz-desc{
+    width: 100%;
+    max-width: 850px;
 
-    font-size: 20px;
+    margin: 35px auto 0;
 
-    font-weight: 400;
+    padding: 24px 35px;
 
-    line-height: 1.7;
+    background: rgba(139, 30, 45, 0.65);
+    
+    border-radius: 30px;
 
-    color: #38445e;
+    border-left: 4px solid #A92538;
+    border-top: 4px solid #A92538;
 
-    margin-bottom: 40px;
+    color: #F5F1E8;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    text-align: center;
+
 }
 
 
-/* START BUTTON */
+/* =========================
+   START BUTTON
+========================= */
 
 .start-button {
-    display: inline-block;
+    display: block;
 
-    padding: 20px 38px;
+    width: fit-content;
 
-    background: #f7941d;
+    margin: 35px auto 0;
+
+    padding: 16px 32px;
+
+    background: #A92538;
 
     color: white;
+
+    border-radius: 30px;
 
     text-decoration: none;
 
     font-size: 18px;
 
-    font-weight: bold;
+    font-weight: 700;
 
-    border-radius: 35px;
+    transition: 0.3s ease;
 
-    box-shadow: 0 10px 25px rgba(247, 148, 29, 0.25);
+    box-shadow:
+        0 0 20px rgba(169, 37, 56, 0.3);
 
-    transition: 0.2s;
+    font-family: 'Michroma', sans-serif;
 }
 
 .start-button:hover {
-    transform: translateY(-2px);
+    background: #C13248;
 
-    background: #e98712;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(169, 37, 56, 0.55);
 }
