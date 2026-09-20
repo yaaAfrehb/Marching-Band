@@ -16,7 +16,6 @@ function showQuestion() {
 
     });
 
-    // Update "1 of 10"
     document.getElementById("question-number").textContent =
         `${currentQuestion + 1} of ${questions.length}`;
 
@@ -54,8 +53,6 @@ document.getElementById("next-button").addEventListener("click", function (event
         return;
     }
 
-    // ⭐ NEW: Check if the selected answer is correct before changing the question
-    // This assumes your correct radio inputs look like: <input type="radio" value="correct">
     if (selected.value === "correct") {
         score++;
     }
@@ -72,27 +69,26 @@ document.getElementById("next-button").addEventListener("click", function (event
 });
 
 
-// Results
-// Results rendering function with score-based feedback and background colors
+
 function showResults() {
     // Hide  quiz containers
     document.getElementById("bandQuiz").style.display = "none";
     document.querySelector(".quiz-top").style.display = "none";
     document.querySelector(".progress").style.display = "none";
 
-    // Variables to hold our customized text and color
+    //to hold customized text and color
     let resultHeading = "";
     let resultDescription = "";
     let backgroundColor = "";
 
-    // Check the score to determine the tier and color
+    // Check score to determine the tier and color
     if (score === 10) {
         resultHeading = "🥇 Absolute Unit!";
         resultDescription = "Flawless 10/10. You're definitely ready for Summer Band Camp.";
         backgroundColor = "#d4af37"; // Metallic Gold
     } else if (score >= 7) {
         resultHeading = "🎺 Band Camp Survivor";
-        resultDescription = "At least, you made through...";
+        resultDescription = "AYYY, you made through... Didn't really expect you to.";
         backgroundColor = "#4caf50"; // Grass Green
     } else if (score >= 4) {
         resultHeading = "🥵 Severely Dehydrated";
@@ -100,18 +96,18 @@ function showResults() {
         backgroundColor = "#ff9800"; // Heat Warning Orange
     } else {
         resultHeading = "❌ Instant Cut";
-        resultDescription = "You're selling bad. Did you even show up to camp?"
+        resultDescription = "You're selling bad. Did you even show up to camp?";
+        backgroundColor = "8B1E2D"; // Sun-burnt Red
     }
 
-   // ⭐ FORCED BACKGROUND RESET: Clear out the stripes and field lines entirely
+  
     document.body.style.setProperty("background", backgroundColor, "important");
     
-    // Inject a special CSS style tag directly into the page to turn off the ::before and ::after white yard lines
     const styleOverride = document.createElement("style");
     styleOverride.innerHTML = "body::before, body::after { display: none !important; }";
     document.head.appendChild(styleOverride);
 
-    // Keep text high contrast against the solid color background
+
     document.body.style.color = "#ffffff"; 
 
 

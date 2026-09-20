@@ -133,11 +133,34 @@ body::after {
 
 
 /* ANSWERS */
+.question input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
 
-.question input {
-    margin-right: 10px;
-    color:#1a1a1a;
-    font-family: 'Space Grotesk', sans-serif
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid #F5F1E8;
+    border-radius: 50%;
+
+    background: transparent;
+
+    margin: 0 12px 0 0;
+
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.question input[type="radio"]:checked {
+    border: 6px solid #A92538;
+
+    background: #F5F1E8;
+
+    box-shadow:
+        0 0 12px rgba(169, 37, 56, 0.8);
 }
 
 .question label {
@@ -219,4 +242,27 @@ body::after {
 
 .restart-btn:active {
     transform: scale(0.98);
+}
+
+.back-home-btn {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #F5F1E8;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.back-home-btn:hover {
+    color: white;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.7);
 }
