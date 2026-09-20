@@ -67,9 +67,12 @@ body::after {
 }
 
 .category {
-    color: #777;
+    color: whitesmoke;
     letter-spacing: 1px;
     font-family: 'Michroma', sans-serif;
+    background-color: #777;
+    padding: 1.5px 10px;
+    border-radius: 10px;
 }
 
 .dot {
@@ -144,8 +147,8 @@ body::after {
 
 /* NEXT */
 
-#next-button { 
-    padding: 15px 30px;
+.next-button { 
+    padding: 15px;
     display: block;
     margin: 30px auto 0;
 
@@ -157,12 +160,16 @@ body::after {
 
     font-size: 17px;
     font-weight: bold;
-
+    font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
 }
 
-#next-button:hover { 
+    next-button:hover { 
     background: #dcdcdc;
+    padding: 15px 15px;
+    font-size: 35px;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.5);
 }
 
 
