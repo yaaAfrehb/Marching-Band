@@ -83,9 +83,14 @@ function showResults() {
 
     // Show results
     // ⭐ UPDATED: Added the dynamic score out of 10 inside the template literal
-    document.getElementById("results").innerHTML = `
+    document.getElementById("results").innerHTML=`
         <h1>🎺 You survived!</h1>
         <p>You scored <strong>${score}</strong> out of ${questions.length} questions.</p>
         <button onclick="location.reload()">Take it again</button>
     `;
 }
+
+window.addEventListener("DOMContentLoaded", () =>  {
+    showQuestion();
+});
+

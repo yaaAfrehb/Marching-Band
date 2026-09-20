@@ -147,7 +147,7 @@ body::after {
 
 /* NEXT */
 
-.next-button { 
+#next-button { 
     padding: 15px;
     display: block;
     margin: 30px auto 0;
