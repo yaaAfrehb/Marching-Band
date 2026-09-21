@@ -185,18 +185,81 @@ story {
 
 /* * navbar */
 .navbar {
-    background-color: darkred;
-    padding: 10px;
-    text-align: center;
+    position: relative;
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 32px;
+
+    padding: 15px 20px;
+
+    background: darkred;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    z-index: 10;
+
+    font-family:'Michroma', sans-serif;
 }
+
+
 .navbar li {
-    display: inline-block;
-    margin: 0 15px;
+    list-style: none;
 }
+
+
 .navbar a {
-    color: #f5f1e8;
+    position: relative;
+
+    color: #F5F1E8;
+
     text-decoration: none;
-    font-family: 'Michroma', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: white;
+
+    transition: width 0.3s ease;
+}
+
+
+.navbar a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.5);
+}
+
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 

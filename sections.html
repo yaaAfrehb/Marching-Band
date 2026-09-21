@@ -8,64 +8,138 @@
     <link rel="stylesheet" href="sections.css">
 </head>
 <body>
-    <!-- navigation bar -->
- <div class="navbar">
-    <li><a href="homepage.html">Home</a></li>
-    <li><a href="timeline.html">Timeline</a></li>
-    <li><a href="sections.html">Learn about the Sections</a></li>
-    <li><a href="quiz.html">Would you Survive Summer Band?</a></li>
-    <li><a href="support.html">Support Me!</a></li>
-  </div>
+      <div class="background">
+    <div class="grid"></div>
+
+    <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="sections.html" class="active">Learn about the Sections</a></li>
+        <li><a href="quiz.html">Would you Survive Summer Band?</a></li>
+        <li><a href="support.html">Support Me!</a></li>
+    </div>
   
-  <!-- main -->
-<header>
-    <h1>Learn About the Sections!</h1>
+    <header class="homepage-matched-header">
+        <h1>Learn About the Sections</h1>
     </header>
-    <section id ="drummajor">
-        <img src="images/drummajor1.jpg" alt="Drum Major">
-        <h2>Drum Major</h2>
-        <h3><em>The Leader</em></h3>
-        <p>
-            The drum major is the leader of the marching band. They are responsible for conducting the band during performances, leading rehearsals, and serving as a liaison between the band and the director. To be a drum major is to be a strong, confident leader who can stay calm under pressure and inspire others to do the same and give their best.
-        </p>
-    <section id ="woodwinds">
-    <img src="images/woodwinds.jpg" alt="Woodwinds">
-    <h2>Woodwinds</h2>
-    <h3><em>The Melodic Shapers</em></h3>
-    <p>
-        The woodwind section is made up of instruments such as the flute, clarinet, and saxophone. These instruments are known for their ability to create beautiful melodies and harmonies. Woodwind players must have strong breath control and finger dexterity to play their instruments effectively. They often play a crucial role in shaping the overall sound of the band.
-    </p>
-    <section id ="brass">
-    <img src="images/trumpets.jpg" alt="Brass">
-    <h2>Brass</h2>
-    <h3><em>The Powerhouse & Boom</em></h3>
-    <p>
-        The brass section is made up of instruments such as the trumpet, trombone, and French horn. These instruments are known for their ability to produce powerful, bold sounds that can cut through the noise of a large marching band. Brass players must have strong breath control and embouchure strength to play their instruments effectively. They often provide the backbone of the band's sound and are crucial for creating the energetic atmosphere that defines a successful marching band performance.
-    </p>
-    </section>
-    <section id ="percussion">
-        <img src="images/snares.jpg" alt="Percussion">
-        <h2>Percussion</h2>
-        <h3><em>The Heartbeat and Pulse</em></h3>
-        <p>
-            The percussion section is made up of instruments such as the snare drum, bass drum, and cymbals. These instruments are known for their ability to provide the rhythmic foundation and dynamic accents that drive the music forward. Percussion players must have strong coordination and timing to play their instruments effectively. They often serve as the heartbeat of the band, providing the energy and momentum that keeps the performance moving.
-        </p>
-    </section>
-    <section id ="pit">
-        <img src="images/pit.jpg" alt="Pit Percussion- Front Ensemble">
-        <h2>Pit Percussion- Front Ensemble</h2>
-        <h3><em>The Rhythmic Foundation</em></h3>
-        <p>
-            The pit percussion and/or front ensemble section is made up of instruments such as the timpani, mallets, and various auxiliary percussion instruments. These instruments are known for their ability to provide the rhythmic foundation and dynamic accents that drive the music forward. Players must have strong coordination and timing to play their instruments effectively. They often serve as the rhythmic backbone of the band, providing the energy and momentum that keeps the performance moving.
-        </p>
-    </section>
-    <section id ="colorguard">
-        <img src="images/guard.jpg" alt="Color Guard">
-        <h2>Color Guard</h2>
-        <h3><em>The Visual Storytellers</em></h3>
-        <p>
-            The color guard section is made up of performers who use flags, rifles, and other props to enhance the visual aspect of the marching band performance. These performers are known for their ability to create dynamic and visually stunning routines that complement the music being played by the band. Color guard members must have strong coordination, timing, and athleticism to perform their routines effectively. They often serve as the visual storytellers of the band, bringing the music to life through their movements and choreography.
-        </p>
-    </section>
+
+    <!-- Main Content Container -->
+    <main class="sections-container">
+
+        <!-- DRUM MAJOR -->
+        <section id="drummajor" class="section-row">
+            <div class="section-media">
+                <div class="shape-clipper">
+                    <img src="images/drummajor1.jpg" alt="Drum Major">
+                </div>
+            </div>
+            <div class="section-info">
+                <h2>DRUM MAJOR</h2>
+                <h3>THE LEADER</h3>
+                <p>
+                    The drum major is the leader of the marching band. They are responsible for conducting the band during performances, leading rehearsals, and serving as a liaison between the band and the director. To be a drum major is to be a strong, confident leader who can stay calm under pressure and inspire others to do the same and give their best.
+                </p>
+            </div>
+        </section>
+
+        <!-- WOODWINDS -->
+        <section id="woodwinds" class="section-row">
+            <div class="section-media">
+                <div class="shape-clipper">
+                    <img src="images/woodwinds.jpg" alt="Woodwinds">
+                </div>
+            </div>
+            <div class="section-info">
+                <h2>WOODWINDS</h2>
+                <h3>THE MELODIC SHAPERS</h3>
+                <p>
+                    The woodwind section is made up of instruments such as the flute, clarinet, and saxophone. These instruments are known for their ability to create beautiful melodies and harmonies. Woodwind players must have strong breath control and finger dexterity to play their instruments effectively. They often play a crucial role in shaping the overall sound of the band.
+                </p>
+            </div>
+        </section>
+
+        <!-- BRASS -->
+        <section id="brass" class="section-row">
+            <div class="section-media">
+                <div class="shape-clipper">
+                    <img src="images/trumpets.jpg" alt="Brass">
+                </div>
+            </div>
+            <div class="section-info">
+                <h2>BRASS</h2>
+                <h3>THE POWERHOUSE & BOOM</h3>
+                <p>
+                    The brass section is made up of instruments such as the trumpet, trombone, and French horn. These instruments are known for their ability to produce powerful, bold sounds that can cut through the noise of a large marching band. Brass players must have strong breath control and embouchure strength to play their instruments effectively. They often provide the backbone of the band's sound and are crucial for creating the energetic atmosphere that defines a successful marching band performance.
+                </p>
+            </div>
+        </section>
+
+        <!-- PERCUSSION -->
+        <section id="percussion" class="section-row">
+            <div class="section-media">
+                <div class="shape-clipper">
+                    <img src="images/snares.jpg" alt="Percussion">
+                </div>
+            </div>
+            <div class="section-info">
+                <h2>PERCUSSION</h2>
+                <h3>THE HEARTBEAT AND PULSE</h3>
+                <p>
+                    The percussion section is made up of instruments such as the snare drum, bass drum, and cymbals. These instruments are known for their ability to provide the rhythmic foundation and dynamic accents that drive the music forward. Percussion players must have strong coordination and timing to play their instruments effectively. They often serve as the heartbeat of the band, providing the energy and momentum that keeps the performance moving.
+                </p>
+            </div>
+        </section>
+
+        <!-- PIT -->
+        <section id="pit" class="section-row">
+            <div class="section-media">
+                <div class="shape-clipper">
+                    <img src="images/pit.jpg" alt="Pit Percussion- Front Ensemble">
+                </div>
+            </div>
+            <div class="section-info">
+                <h2>PIT PERCUSSION- FRONT ENSEMBLE</h2>
+                <h3>THE RHYTHMIC FOUNDATION</h3>
+                <p>
+                    The pit percussion and/or front ensemble section is made up of instruments such as the timpani, mallets, and various auxiliary percussion instruments. These instruments are known for their ability to provide the rhythmic foundation and dynamic accents that drive the music forward. Players must have strong coordination and timing to play their instruments effectively. They often serve as the rhythmic backbone of the band, providing the energy and momentum that keeps the performance moving.
+                </p>
+            </div>
+        </section>
+
+        <!-- COLOR GUARD -->
+        <section id="colorguard" class="section-row">
+            <div class="section-media">
+                <div class="shape-clipper">
+                    <img src="images/guard.jpg" alt="Color Guard">
+                </div>
+            </div>
+            <div class="section-info">
+                <h2>COLOR GUARD</h2>
+                <h3>THE VISUAL STORYTELLERS</h3>
+                <p>
+                    The color guard section is made up of performers who use flags, rifles, and other props to enhance the visual aspect of the marching band performance. These performers are known for their ability to create dynamic and visually stunning routines that complement the music being played by the band. Color guard members must have strong coordination, timing, and athleticism to perform their routines effectively. They often serve as the visual storytellers of the band, bringing the music to life through their movements and choreography.
+                </p>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>

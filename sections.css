@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Space+Grotesk:wght@300..700&display=swap');
+
+
 /* Smooth Scroll Activation */
 html {
     scroll-behavior: smooth;
@@ -8,9 +11,405 @@ html {
     margin: 0;
     padding: 0;
 }
+body {
+    margin: 0;
+    background-color: #1a1a1a;
+    font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+    margin: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #174d2b 0px,
+            #174d2b 80px,
+            #1b5a32 80px,
+            #1b5a32 160px
+        );
+
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 9.5%,
+            rgba(255,255,255,0.35) 9.5%,
+            rgba(255,255,255,0.35) 10%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(255,255,255,0.18),
+            transparent 55%
+        );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+
+/* --- Global Theme Sync --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    background-color: #f1f5f9;
-    color: #334155;
-    padding-bottom: 80px;
+  background-color: #0b0c10; /* Pure deep shadow background */
+  color: #f1f2f6;
+  font-family: "Michroma", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Background atmospheric points matching your red home dashboard nodes */
+.dots {
+    position: absolute;
+    inset: 0;
+}
+
+.dots span {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: whitesmoke;
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px rgba(169, 37, 56, 0.8);
+
+    animation: float 15s ease-in-out infinite;
+}
+
+.dots span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.dots span:nth-child(2) {
+    left: 25%;
+    top: 70%;
+}
+
+.dots span:nth-child(3) {
+    left: 40%;
+    top: 35%;
+}
+
+.dots span:nth-child(4) {
+    left: 55%;
+    top: 80%;
+}
+
+.dots span:nth-child(5) {
+    left: 70%;
+    top: 25%;
+}
+
+.dots span:nth-child(6) {
+    left: 85%;
+    top: 60%;
+}
+
+.dots span:nth-child(7) {
+    left: 15%;
+    top: 90%;
+}
+
+.dots span:nth-child(8) {
+    left: 35%;
+    top: 10%;
+}
+
+.dots span:nth-child(9) {
+    left: 65%;
+    top: 50%;
+}
+
+.dots span:nth-child(10) {
+    left: 90%;
+    top: 15%;
+}
+
+.dots span:nth-child(11) {
+    left: 50%;
+    top: 15%;
+}
+
+.dots span:nth-child(12) {
+    left: 80%;
+    top: 85%;
+}
+
+
+@keyframes float {
+    0%, 50% {
+        transform: translate(0, 0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(20px, -30px);
+        opacity: 1;
+    }
+}
+
+/* --- Synced Navigation Bar --- */
+.navbar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 32px;
+
+    padding: 15px 20px;
+
+    background: #0b0c10;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    z-index: 10;
+
+    font-family:'Michroma', sans-serif;
+}
+
+
+.navbar li {
+    list-style: none;
+}
+
+
+.navbar a {
+    position: relative;
+
+    color: #F5F1E8;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: white;
+
+    transition: width 0.3s ease;
+}
+
+
+.navbar a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.5);
+}
+
+
+.navbar a:hover::after {
+    width: 100%;
+}
+/* --- Synced Header Style --- */
+.homepage-matched-header {
+  text-align: center;
+  padding: 80px 20px 40px 20px;
+  position: relative;
+  z-index: 2;
+  background-color: #1a1a1a;
+  padding: 15px 15px;
+  margin-top: 1.5%;
+  border-radius: 30px;
+  border-left: 4px solid #f1f2f6;
+  border-top: 4px solid #f1f2f6;
+}
+.homepage-matched-header h1 {
+  font-family: 'Michroma',sans-serif; /* Wide structure font */
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* --- Main Layout Grid Architecture --- */
+.sections-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 20px 200px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 140px; /* Buffer rows tracking */
+  position: relative;
+  z-index: 2;
+}
+
+.section-row {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  position: relative;
+  
+  view-timeline-name: --sectionTimeline;
+  view-timeline-axis: block;
+}
+.section-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* --- Image Frames (Boxy Style like your homepage layout) --- */
+.section-media {
+  flex: 1;
+}
+.shape-clipper {
+  width: 100%;
+  aspect-ratio: 1 / 1.15; /* Tall portrait crop matching your homepage preview panes */
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+  
+  animation-name: scrollRevealShape;
+  animation-fill-mode: both;
+  animation-timeline: --sectionTimeline;
+  animation-range: entry 5% contain 35%;
+}
+.shape-clipper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  animation-name: scrollRevealPhoto;
+  animation-fill-mode: both;
+  animation-timeline: --sectionTimeline;
+  animation-range: entry 5% contain 35%;
+}
+
+/* --- Description Profiles --- */
+.section-info {
+  flex: 1.1;
+  animation-name: scrollRevealText;
+  animation-fill-mode: both;
+  animation-timeline: --sectionTimeline;
+  animation-range: entry 10% contain 35%;
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 30px;
+  border-left:4px solid #f1f2f6;
+  border-top: 4px solid #f1f2f6;
+}
+
+.section-info h2 {
+  font-family: "Michroma", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  color: #ffffff;
+}
+.section-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ef4444; /* Bright crimson italic tags */
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
+.section-info p {
+  color: #94a3b8; /* Muted gray narrative text style */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* --- DRAG-DRIVEN SCROLL ENGINE --- */
+@keyframes scrollRevealShape {
+  from {
+    transform: scale(0.92) translateY(40px);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scrollRevealPhoto {
+  from {
+    transform: scale(1.2);
+    filter: saturate(30%) contrast(110%);
+  }
+  to {
+    transform: scale(1.02);
+    filter: saturate(100%) contrast(100%);
+  }
+}
+
+@keyframes scrollRevealText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Mobile System Layout --- */
+@media (max-width: 768px) {
+  .sections-container { gap: 80px; }
+  .homepage-matched-header h1 { font-size: 2.2rem; }
+  .navbar { flex-wrap: wrap; gap: 15px; padding: 15px; }
+  .section-row, .section-row:nth-child(even) {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  .shape-clipper, .shape-clipper img, .section-info {
+    animation: none !important;
+  }
+  .shape-clipper { aspect-ratio: 4/3; }
+  .shape-clipper img { transform: scale(1); }
 }
