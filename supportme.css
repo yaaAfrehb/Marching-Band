@@ -19,6 +19,27 @@ h1 {
     border-left: 4px solid #fcfcfc;
     border-top: 4px solid #fcfcfc;
 }
+.supportmessagetwo{
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: darkred;
+    color: #f5f1e8;
+}
+
+.cta-button{    
+    display: inline-block;
+    background-color: darkred;
+    color:#fcf1e8;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3 ease-in-out;
+}
+
+.cta-button:hover{
+    background-color: #f5f1e8;
+    color:black;
+}
 /* * navbar */
 .navbar {
     position: relative;
