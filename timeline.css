@@ -1,0 +1,369 @@
+/* =========================
+   GENERAL PAGE
+========================= */
+
+body {
+
+    margin: 0;
+
+    padding: 40px;
+
+    background-color: #020812;
+
+    color: #e8faff;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 80px;
+
+}
+
+
+.system-text {
+
+    color: #00c8ff;
+
+    font-family: monospace;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+}
+
+
+.header h1 {
+
+    font-size: 55px;
+
+    letter-spacing: 8px;
+
+    margin: 10px;
+
+    color: #00c8ff;
+
+    text-shadow:
+        0 0 5px #00c8ff,
+        0 0 20px #00c8ff;
+
+}
+
+
+.subtitle {
+
+    font-family: monospace;
+
+    letter-spacing: 4px;
+
+}
+
+
+.status {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    border: 1px solid #00c8ff;
+
+    color: #00c8ff;
+
+    font-family: monospace;
+
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+    position: relative;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+/* CENTER LINE */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 3px;
+
+    background-color: #00c8ff;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 8px #00c8ff,
+        0 0 20px #00c8ff;
+
+}
+
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+
+.timeline-item {
+
+    position: relative;
+
+    min-height: 180px;
+
+    margin-bottom: 60px;
+
+}
+
+
+/* =========================
+   DOT
+========================= */
+
+.dot {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 30px;
+
+    width: 18px;
+
+    height: 18px;
+
+    background-color: #00c8ff;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 10px #00c8ff,
+        0 0 25px #00c8ff;
+
+    z-index: 2;
+
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date {
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 40%;
+
+    color: #00c8ff;
+
+    font-family: monospace;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* LEFT / RIGHT DATES */
+
+.timeline-item:nth-child(odd) .date {
+
+    left: 0;
+
+    text-align: right;
+
+    padding-right: 70px;
+
+}
+
+
+.timeline-item:nth-child(even) .date {
+
+    right: 0;
+
+    text-align: left;
+
+    padding-left: 70px;
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+
+    width: 35%;
+
+    padding: 25px;
+
+    background-color: #071525;
+
+    border: 1px solid #00c8ff;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.2);
+
+}
+
+
+/* ALTERNATING CARDS */
+
+.timeline-item:nth-child(odd) .card {
+
+    margin-left: 55%;
+
+}
+
+
+.timeline-item:nth-child(even) .card {
+
+    margin-left: 5%;
+
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.step-number {
+
+    color: #00c8ff;
+
+    font-family: ;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.card h2 {
+
+    margin-top: 10px;
+
+}
+
+
+.status-text {
+
+    color: #00c8ff;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================
+   ENDING
+========================= */
+
+.ending {
+
+    max-width: 700px;
+
+    margin: 100px auto;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border: 1px solid #00c8ff;
+
+    background-color: #071525;
+
+    box-shadow:
+        0 0 20px rgba(0, 200, 255, 0.25);
+
+}
+
+
+.ending h2 {
+
+    color: #00c8ff;
+
+    letter-spacing: 3px;
+
+}
+
+
+.arrow {
+
+    color: #00c8ff;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 15px;
+
+    border: 1px solid #00c8ff;
+
+    margin: 25px 0;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #00c8ff;
+
+    box-shadow:
+        0 0 10px #00c8ff;
+
+}
