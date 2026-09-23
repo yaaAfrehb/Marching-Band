@@ -1,79 +1,66 @@
-/* =========================
-   GENERAL PAGE
-========================= */
+/* ==============================
+   GENERAL
+================================= */
 
 body {
-
     margin: 0;
-
     padding: 40px;
 
     background-color: #020812;
-
     color: #e8faff;
 
-    font-family: Arial, sans-serif;
-
+    font-family: "Space Grotesk", sans-serif;
 }
 
 
-/* =========================
+/* ==============================
    HEADER
-========================= */
+================================= */
 
 .header {
-
     text-align: center;
-
     margin-bottom: 80px;
-
 }
 
-
 .system-text {
+    font-family: "Michroma", sans-serif;
 
     color: #00c8ff;
 
-    font-family: monospace;
-
     letter-spacing: 3px;
 
-    font-size: 14px;
-
+    font-size: 13px;
 }
 
-
 .header h1 {
+    font-family: "Michroma", sans-serif;
 
     font-size: 55px;
 
     letter-spacing: 8px;
 
-    margin: 10px;
+    margin: 15px 0;
 
     color: #00c8ff;
 
     text-shadow:
         0 0 5px #00c8ff,
-        0 0 20px #00c8ff;
-
+        0 0 15px #00c8ff,
+        0 0 30px #00c8ff;
 }
-
 
 .subtitle {
+    font-family: "Michroma", sans-serif;
 
-    font-family: monospace;
+    font-size: 14px;
 
-    letter-spacing: 4px;
-
+    letter-spacing: 3px;
 }
 
-
 .status {
-
     display: inline-block;
 
-    margin-top: 20px;
+    margin-top: 25px;
 
     padding: 10px 20px;
 
@@ -81,30 +68,64 @@ body {
 
     color: #00c8ff;
 
-    font-family: monospace;
+    font-family: "Michroma", sans-serif;
 
+    font-size: 12px;
+
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.25);
 }
 
 
-/* =========================
+/* ==============================
+   INTRO
+================================= */
+
+.intro {
+    max-width: 800px;
+
+    margin: 0 auto 80px auto;
+
+    padding: 30px;
+
+    background-color: #071525;
+
+    border-left: 3px solid #00c8ff;
+
+    border-right: 1px solid #07577a;
+}
+
+.intro h2 {
+    font-family: "Michroma", sans-serif;
+
+    color: #00c8ff;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+}
+
+.intro p {
+    line-height: 1.7;
+}
+
+
+/* ==============================
    TIMELINE
-========================= */
+================================= */
 
 .timeline {
-
     position: relative;
 
-    max-width: 1000px;
+    max-width: 1100px;
 
     margin: auto;
-
 }
 
 
-/* CENTER LINE */
+/* CENTRAL LINE */
 
 .timeline::before {
-
     content: "";
 
     position: absolute;
@@ -124,36 +145,77 @@ body {
     box-shadow:
         0 0 8px #00c8ff,
         0 0 20px #00c8ff;
-
 }
 
 
-/* =========================
+/* ==============================
    TIMELINE ITEM
-========================= */
+================================= */
 
 .timeline-item {
-
     position: relative;
 
-    min-height: 180px;
+    min-height: 260px;
 
-    margin-bottom: 60px;
-
+    margin-bottom: 80px;
 }
 
 
-/* =========================
+/* ==============================
+   DATE
+================================= */
+
+.date {
+    position: absolute;
+
+    top: 25px;
+
+    width: 40%;
+
+    font-family: "Michroma", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    letter-spacing: 2px;
+
+    color: #00c8ff;
+}
+
+
+/* LEFT */
+
+.timeline-item:nth-child(odd) .date {
+    left: 0;
+
+    text-align: right;
+
+    padding-right: 75px;
+}
+
+
+/* RIGHT */
+
+.timeline-item:nth-child(even) .date {
+    right: 0;
+
+    text-align: left;
+
+    padding-left: 75px;
+}
+
+
+/* ==============================
    DOT
-========================= */
+================================= */
 
 .dot {
-
     position: absolute;
 
     left: 50%;
 
-    top: 30px;
+    top: 25px;
 
     width: 18px;
 
@@ -167,196 +229,249 @@ body {
 
     transform: translateX(-50%);
 
+    z-index: 2;
+
     box-shadow:
         0 0 10px #00c8ff,
         0 0 25px #00c8ff;
-
-    z-index: 2;
-
 }
 
 
-/* =========================
-   DATE
-========================= */
-
-.date {
-
-    position: absolute;
-
-    top: 25px;
-
-    width: 40%;
-
-    color: #00c8ff;
-
-    font-family: monospace;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-}
-
-
-/* LEFT / RIGHT DATES */
-
-.timeline-item:nth-child(odd) .date {
-
-    left: 0;
-
-    text-align: right;
-
-    padding-right: 70px;
-
-}
-
-
-.timeline-item:nth-child(even) .date {
-
-    right: 0;
-
-    text-align: left;
-
-    padding-left: 70px;
-
-}
-
-
-/* =========================
+/* ==============================
    CARDS
-========================= */
+================================= */
 
 .card {
+    width: 38%;
 
-    width: 35%;
-
-    padding: 25px;
+    padding: 28px;
 
     background-color: #071525;
 
     border: 1px solid #00c8ff;
 
-    border-radius: 5px;
+    border-radius: 4px;
 
     box-shadow:
-        0 0 10px rgba(0, 200, 255, 0.2);
+        0 0 15px rgba(0, 200, 255, 0.15);
 
+    line-height: 1.6;
 }
 
 
-/* ALTERNATING CARDS */
+/* LEFT CARD */
 
 .timeline-item:nth-child(odd) .card {
-
     margin-left: 55%;
-
 }
 
+
+/* RIGHT CARD */
 
 .timeline-item:nth-child(even) .card {
-
-    margin-left: 5%;
-
+    margin-left: 4%;
 }
 
 
-/* =========================
-   CARD TEXT
-========================= */
+/* ==============================
+   CARD HEADINGS
+================================= */
 
 .step-number {
+    margin-top: 0;
 
-    color: #00c8ff;
+    font-family: "Michroma", sans-serif;
 
-    font-family: ;
-
-    font-size: 13px;
+    font-size: 11px;
 
     letter-spacing: 1px;
 
+    color: #00c8ff;
 }
-
 
 .card h2 {
+    font-family: "Michroma", sans-serif;
 
-    margin-top: 10px;
+    font-size: 19px;
 
+    line-height: 1.4;
+
+    color: #ffffff;
 }
 
+.card h3 {
+    margin-top: 25px;
 
-.status-text {
+    font-family: "Michroma", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
 
     color: #00c8ff;
-
-    font-family: monospace;
-
-    font-size: 12px;
-
 }
 
 
-/* =========================
-   ENDING
-========================= */
+/* ==============================
+   LISTS
+================================= */
 
-.ending {
+.card ul {
+    padding-left: 20px;
+}
 
-    max-width: 700px;
+.card li {
+    margin-bottom: 7px;
+}
 
-    margin: 100px auto;
 
-    padding: 40px;
+/* ==============================
+   STATUS
+================================= */
+
+.status-text {
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #12364a;
+
+    font-family: "Michroma", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #00c8ff;
+}
+
+
+/* ==============================
+   EQUATION
+================================= */
+
+.equation {
+    margin: 25px 0;
+
+    padding: 20px;
 
     text-align: center;
 
-    border: 1px solid #00c8ff;
+    font-family: "Michroma", sans-serif;
 
-    background-color: #071525;
+    font-size: 13px;
 
-    box-shadow:
-        0 0 20px rgba(0, 200, 255, 0.25);
+    line-height: 2.5;
 
+    color: #00c8ff;
+
+    border: 1px solid #07577a;
+
+    background-color: #030d18;
+}
+
+.equation span {
+    color: white;
+
+    margin: 0 5px;
+}
+
+.equation strong {
+    display: block;
+
+    font-size: 18px;
+
+    color: white;
+
+    text-shadow:
+        0 0 8px #00c8ff;
 }
 
 
-.ending h2 {
+/* ==============================
+   CYCLE
+================================= */
+
+.cycle {
+    padding: 18px;
+
+    background-color: #030d18;
+
+    border: 1px solid #07577a;
+
+    color: #00c8ff;
+
+    font-family: "Michroma", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 2;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   ENDING
+================================= */
+
+.ending {
+    max-width: 700px;
+
+    margin: 120px auto 40px auto;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background-color: #071525;
+
+    border: 1px solid #00c8ff;
+
+    box-shadow:
+        0 0 20px rgba(0, 200, 255, 0.25);
+}
+
+.ending h2,
+.ending h1 {
+    font-family: "Michroma", sans-serif;
 
     color: #00c8ff;
 
     letter-spacing: 3px;
-
 }
 
+.ending h1 {
+    font-size: 35px;
+
+    text-shadow:
+        0 0 10px #00c8ff;
+}
 
 .arrow {
-
     color: #00c8ff;
 
-    font-size: 30px;
-
+    font-size: 35px;
 }
 
 
-/* =========================
+/* ==============================
    PROGRESS BAR
-========================= */
+================================= */
 
 .progress-container {
-
     width: 100%;
 
     height: 15px;
 
-    border: 1px solid #00c8ff;
-
     margin: 25px 0;
 
+    border: 1px solid #00c8ff;
+
+    background-color: #020812;
 }
 
-
 .progress-bar {
-
     width: 100%;
 
     height: 100%;
@@ -364,6 +479,139 @@ body {
     background-color: #00c8ff;
 
     box-shadow:
-        0 0 10px #00c8ff;
+        0 0 10px #00c8ff,
+        0 0 20px #00c8ff;
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 35px;
+
+        letter-spacing: 4px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        margin-bottom: 50px;
+    }
+
+    .dot {
+        left: 20px;
+    }
+
+    .date {
+        position: relative;
+
+        width: auto;
+
+        left: auto !important;
+
+        right: auto !important;
+
+        padding: 0 0 15px 50px !important;
+
+        text-align: left !important;
+    }
+
+    .card {
+        width: auto;
+
+        margin-left: 50px !important;
+    }
 
 }
+
+/* * navbar */
+.navbar {
+    position: absolute;
+
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+ 
+    justify-content: center;
+
+    gap: 32px;
+
+    padding: 5x 5px;
+
+    background: black;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    z-index: 5;
+    right: auto;
+    top: 0%;
+    font-family:'Michroma', sans-serif;
+}
+
+
+.navbar li {
+    list-style: none;
+}
+
+
+.navbar a {
+    position: relative;
+
+    color: #F5F1E8;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0%;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: white;
+
+    transition: width 0.3s ease;
+}
+
+
+.navbar a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.5);
+}
+
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
