@@ -1,6 +1,6 @@
 # 8 to 5: The Inner Workings of the Marching Band
 
-A responsive, user-friendly website designed to explore the components of a **marching band halftime show** and the **sections** that make up the band.
+A website designed to explore the components of a **marching band halftime show** and the **sections** that make up the band.
 
 ## 🎺 About the Project
 
@@ -23,10 +23,6 @@ This project serves as an educational guide for understanding what happens behin
 
 To view and run this project locally on your machine, follow these steps:
 
-### Prerequisites
-You only need a modern web browser (like Google Chrome, Safari, or Firefox) installed on your computer.
-
-### Installation & Running
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yaaAfrehb/Marching-Band.git
