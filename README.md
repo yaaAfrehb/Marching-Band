@@ -2,6 +2,9 @@
 
 I made a website designed to explore the components of a **marching band halftime show** and the **sections** that make up the band.
 
+<img width="855" height="849" alt="Screenshot 2026-09-20 172420" src="https://github.com/user-attachments/assets/7bc1ce23-e087-4bec-b43c-375782363096" />
+
+
 ## Challenges:
 There were three things that were challenging to me
 1. Javascript (really sensitive topic for me)
