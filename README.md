@@ -4,9 +4,9 @@ I made a website designed to explore the components of a **marching band halftim
 
 ## Challenges:
 There were three things that were challenging to me
-1. Javascript (really sensitive topic for right now)
+1. Javascript (really sensitive topic for me)
 2. The layouts for each page (except the homepage)
-3. The background for the homepage(couldn't really decide)
+3. The background for the homepage(couldn't really decide how I wanted it)
 
 ## Use
 To learn about what goes into a band and how long it takes for a halftime show to be created (it even surprised me)
