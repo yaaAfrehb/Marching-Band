@@ -19,7 +19,14 @@ To learn about what goes into a band and how long it takes for a halftime show t
 To view and run this project locally on your machine, follow these steps:
 
 ### Option 1: Git and Terminal:
-Install Git on your laptop and run this command on the bulit-in terminal:
+1. Install Git on your laptop
+ Create a folder or use another for this step and run this command in the terminal:
+```bash
+cd\Folder\Folder
+```
+Ex. cd\Pictures\Marching Band
+
+2. Run this command after:
    ```bash
    git clone https://github.com/yaaAfrehb/Marching-Band.git
    ```
